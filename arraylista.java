@@ -14,21 +14,4 @@ public class ArrayList {
 }
 
 -------------------------------------------------------------------------------------------------------------------
-import java.util.ArrayList;
 
-class Fila2 {
-    ArrayList<String> elemento;
-    
-    public Fila2(){
-        this.elemento = new ArrayList<String>();
-    }
-    public void enfileirar(String aElemento){
-        this.elemento.add(aElemento);
-    }
-    public String recuperarProximo(){
-        return this.elemento.remove(0);
-    }
-    public void modificar(String aElemento){
-        this.elemento.set(0, aElemento);
-    }
-}
