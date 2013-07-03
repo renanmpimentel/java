@@ -1,13 +1,34 @@
-ArrayList<String> nome = new ArrayList<String>
-nome.add("A");
-nome.add("B");
-nome.add("C");
-nome.add("D");
+public class ArrayList {
 
-System.out.println("letra: " + nome.get(0) );
 
-nome.remove(0);
+    public static void main(String[] args) {
+                  
+        Fila2 f06 = new Fila2();
+        f06.enfileirar("A");
+        f06.enfileirar("B");
+        System.out.println("nome: " + f06.recuperarProximo());
+        f06.modificar("C");
+        System.out.println("nome: " +f06.recuperarProximo());
+        
+    }
+}
 
-System.out.println("letra: " + nome.get(0) );
+-------------------------------------------------------------------------------------------------------------------
+import java.util.ArrayList;
 
-nome.set(1,"WW");
+class Fila2 {
+    ArrayList<String> elemento;
+    
+    public Fila2(){
+        this.elemento = new ArrayList<String>();
+    }
+    public void enfileirar(String aElemento){
+        this.elemento.add(aElemento);
+    }
+    public String recuperarProximo(){
+        return this.elemento.remove(0);
+    }
+    public void modificar(String aElemento){
+        this.elemento.set(0, aElemento);
+    }
+}
